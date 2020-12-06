@@ -5,6 +5,8 @@ function App() {
   return ( 
     <section className="main-section">
       <GitLogo />
+      <h1>GitSearch</h1>
+      <input type="text" placeholder="Pesquisar..." />
     </section>
   );
 }
