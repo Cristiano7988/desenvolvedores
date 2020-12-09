@@ -1,0 +1,33 @@
+.container-lista {
+  text-align: center;
+  margin-left: 16px;
+  margin-right: 14px;
+}
+
+.container-lista h1 {
+  padding-top: 14.5px;
+  padding-bottom: 13.5px;
+}
+
+.desenvolvedor {
+  display: flex;
+  padding-left: 24px;
+  padding-top: 14px;
+}
+
+.desenvolvedor,
+.container-titulo {
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.5);
+}
+
+.desenvolvedor img,
+.container-lista .container-titulo {
+  padding-right: 22px;
+  padding-bottom: 11px;
+}
+
+.desenvolvedor img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}

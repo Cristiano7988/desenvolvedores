@@ -1,10 +1,12 @@
 import GitLogo from "./components/GitLogo";
 import "./assets/App.css";
 import { Component } from "react";
+import Lista from "./components/Lista";
 
 class App extends Component {
   constructor() {
     super();
+    this.lista = [];
     this.state = {
       exibirTodos: false,
       lista: [],
@@ -28,7 +30,9 @@ class App extends Component {
 
   render() {
     return this.state.exibirTodos ? (
-      <div>Exibir Resultado</div>
+      <>
+        <Lista lista={this.state.lista} />
+      </>
     ) : (
       <section className="main-section">
         <GitLogo />
