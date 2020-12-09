@@ -10,6 +10,7 @@ class Lista extends Component {
           <Back />
           <h1>Lista de Usuários</h1>
         </div>
+        <input type="text" placeholder="Pesquisar..."/>
         {this.props.lista.map((desenvolvedor, index) => {
           return (
             <a
