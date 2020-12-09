@@ -7,12 +7,33 @@
 .container-lista h1 {
   padding-top: 14.5px;
   padding-bottom: 13.5px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  /* identical to box height, or 147% */
+
+  color: #263238;
 }
 
 .desenvolvedor {
   display: flex;
-  padding-left: 24px;
+  padding-left: 11px;
   padding-top: 14px;
+  padding-bottom: 11px;
+  text-decoration: none;
+}
+
+.desenvolvedor .login {
+  padding-left: 22px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 36px;
+  text-align: center;
+  color: #162668;
 }
 
 .desenvolvedor,
@@ -20,7 +41,6 @@
   border-bottom: 0.5px solid rgba(0, 0, 0, 0.5);
 }
 
-.desenvolvedor img,
 .container-lista .container-titulo {
   padding-right: 22px;
   padding-bottom: 11px;

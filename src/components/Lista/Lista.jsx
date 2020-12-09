@@ -10,12 +10,12 @@ class Lista extends Component {
         </div>
         {this.props.lista.map((desenvolvedor, index) => {
           return (
-            <div className="desenvolvedor" key={index}>
+            <a className="desenvolvedor" href={desenvolvedor.html_url} key={index}>
               <div className="container-img">
                 <img src={desenvolvedor.avatar_url} />
               </div>
-              <div>{desenvolvedor.login}</div>
-            </div>
+              <div className="login">{desenvolvedor.login}</div>
+            </a>
           );
         })}
       </div>
