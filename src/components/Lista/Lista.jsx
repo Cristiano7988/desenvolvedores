@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Back from "../Back";
 import "./estilo.css";
 
 class Lista extends Component {
@@ -6,11 +7,16 @@ class Lista extends Component {
     return (
       <div className="container-lista">
         <div className="container-titulo">
+          <Back />
           <h1>Lista de Usuários</h1>
         </div>
         {this.props.lista.map((desenvolvedor, index) => {
           return (
-            <a className="desenvolvedor" href={desenvolvedor.html_url} key={index}>
+            <a
+              className="desenvolvedor"
+              href={desenvolvedor.html_url}
+              key={index}
+            >
               <div className="container-img">
                 <img src={desenvolvedor.avatar_url} />
               </div>
