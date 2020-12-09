@@ -3,6 +3,14 @@ import "./assets/App.css";
 import { Component } from "react";
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      exibirTodos: false,
+      lista: [],
+    };
+  }
+
   verTodos() {
     fetch("https://api.github.com/users")
       .then((r) => {
@@ -10,19 +18,24 @@ class App extends Component {
           return r.json();
         }
       })
-      .then((r) => {
-        console.log(r);
+      .then((desenvolvedores) => {
+        if (desenvolvedores) {
+          this.setState({ exibirTodos: true });
+          this.setState({ lista: desenvolvedores });
+        }
       });
   }
 
   render() {
-    return (
+    return this.state.exibirTodos ? (
+      <div>Exibir Resultado</div>
+    ) : (
       <section className="main-section">
         <GitLogo />
         <h1>GitSearch</h1>
         <input type="text" placeholder="Pesquisar..." />
         <div className="btn-container">
-          <button className="btn ver-todos" onClick={this.verTodos}>
+          <button className="btn ver-todos" onClick={this.verTodos.bind(this)}>
             Ver Todos
           </button>
           <button className="btn buscar">Buscar</button>
