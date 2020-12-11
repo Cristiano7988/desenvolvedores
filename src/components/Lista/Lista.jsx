@@ -25,7 +25,8 @@ class Lista extends Component {
           seguidores: r.followers,
           bio: r.bio,
           blog: r.blog,
-          cidade: r.location
+          cidade: r.location,
+          url: r.repos_url
         });
       });
   }
@@ -52,6 +53,7 @@ class Lista extends Component {
       </div>
     ) : (
       <Perfil
+        url={this.state.url}
         avatar={this.state.avatar}
         nome={this.state.nome}
         login={this.state.login}
