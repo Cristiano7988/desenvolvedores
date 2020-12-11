@@ -5,7 +5,19 @@ import { ReactComponent as SeguindoIcon } from "../../assets/img/seguindo.svg";
 import { ReactComponent as PerfilIcon } from "../../assets/img/perfil.svg";
 
 class Perfil extends Component {
-  state = {};
+  state = {
+    exibirProjetos: false,
+  };
+  exibeBio() {
+    this.setState({ exibirProjetos: false });
+  }
+  exibeProjetos() {
+    this.setState({ exibirProjetos: true });
+  }
+  formata(numero) {
+        const formatado = JSON.stringify(numero).length > 3 ? parseFloat(numero.toLocaleString()).toFixed(1)+'K' : numero
+        return formatado
+  }
   render() {
     return (
       <div className="container-perfil">
@@ -17,7 +29,7 @@ class Perfil extends Component {
               <div className="perfil-item">
                 <div>
                   <PerfilIcon />
-                  {this.props.nome}
+                  {this.props.login}
                 </div>
               </div>
             </div>
@@ -26,30 +38,31 @@ class Perfil extends Component {
             <div className="container-item">
               <div>
                 <SeguindoIcon />
-                {this.props.seguindo}
+                <span>{this.formata(this.props.seguindo)}</span>
               </div>
               <div>Seguindo</div>
             </div>
             <div className="container-item">
               <div>
                 <ProjetosIcon />
-                {this.props.projetos}
+                <span>{this.formata(this.props.projetos)}</span>
               </div>
               <div>Projetos</div>
             </div>
             <div className="container-item">
               <div>
                 <SeguidoresIcon />
-                {this.props.seguidores}
+                <span>{this.formata(this.props.seguidores)}</span>
               </div>
               <div>Seguidores</div>
             </div>
           </div>
         </header>
         <nav className="container-abas">
-          <div>Sobre</div>
-          <div>Projetos</div>
+          <div onClick={this.exibeBio.bind(this)}>Sobre</div>
+          <div onClick={this.exibeProjetos.bind(this)}>Projetos</div>
         </nav>
+        {this.state.exibirProjetos ? <div>Exibe</div> : <div>Não exibe</div>}
       </div>
     );
   }

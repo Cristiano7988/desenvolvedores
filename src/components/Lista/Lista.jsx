@@ -8,14 +8,23 @@ class Lista extends Component {
   };
 
   exibeDesenvolvedor(e) {
-    this.setState({
-      exibirLista: false,
-      avatar: e.target.attributes.avatar.value,
-      nome: e.target.attributes.login.value,
-      seguindo: e.target.attributes.seguindo.value.replace("{/other_user}", "").length,
-      projetos: e.target.attributes.projetos.value.length,
-      seguidores: e.target.attributes.seguidores.value.length,
-    });
+    fetch(e.target.attributes.dados.value)
+      .then((r) => {
+        if (r.ok) {
+          return r.json();
+        }
+      })
+      .then((r) => {
+        this.setState({
+          exibirLista: false,
+          avatar: r.avatar_url,
+          nome: r.name,
+          login: r.login,
+          seguindo: r.following,
+          projetos: r.public_repos,
+          seguidores: r.followers,
+        });
+      });
   }
 
   render() {
@@ -25,11 +34,7 @@ class Lista extends Component {
         {this.props.lista.map((desenvolvedor, index) => {
           return (
             <a
-              avatar={desenvolvedor.avatar_url}
-              login={desenvolvedor.login}
-              seguindo={desenvolvedor.following_url}
-              projetos={desenvolvedor.repos_url}
-              seguidores={desenvolvedor.followers_url}
+              dados={desenvolvedor.url}
               className="desenvolvedor"
               onClick={this.exibeDesenvolvedor.bind(this)}
               key={index}
@@ -46,9 +51,10 @@ class Lista extends Component {
       <Perfil
         avatar={this.state.avatar}
         nome={this.state.nome}
+        login={this.state.login}
         seguidores={this.state.seguidores}
         projetos={this.state.projetos}
-        seguindo={this.state.seguidores}
+        seguindo={this.state.seguindo}
       />
     );
   }
