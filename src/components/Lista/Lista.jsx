@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Back from "../Back";
+import {ReactComponent as Back} from "../../assets/img/back.svg";
 import "./estilo.css";
 
 class Lista extends Component {

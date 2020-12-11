@@ -1,4 +1,4 @@
-import GitLogo from "./components/GitLogo";
+import {ReactComponent as GitLogo} from "./assets/img/gitLogo.svg";
 import "./assets/App.css";
 import { Component } from "react";
 import Lista from "./components/Lista";
