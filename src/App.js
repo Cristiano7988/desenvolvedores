@@ -1,6 +1,5 @@
 import { ReactComponent as GitLogo } from "./assets/img/gitLogo.svg";
 import { ReactComponent as Back } from "./assets/img/back.svg";
-import "./assets/App.css";
 import { Component } from "react";
 import Lista from "./components/Lista";
 import Perfil from "./components/Perfil";

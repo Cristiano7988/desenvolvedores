@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { ReactComponent as BlogIcon } from "../../assets/img/blog.svg";
 import { ReactComponent as CidadeIcon } from "../../assets/img/cidade.svg";
-import "./estilo.css";
 
 class Sobre extends Component {
   state = {};

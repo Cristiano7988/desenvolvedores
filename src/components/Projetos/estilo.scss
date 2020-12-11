@@ -1,0 +1,56 @@
+.container-projeto {
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.5);
+  margin: 0 20px;
+  height: 98px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 17px;
+  padding-bottom: 7px;
+  .projeto-content {
+    h3 {
+      font-size: 14px;
+      line-height: 21px;
+      color: #0366d6;
+      margin-left: 10px;
+    }  
+  }
+  .projeto-info {
+    margin: 0 20px;
+    font-size: 8px;
+    line-height: 21px;
+    color: #586069;
+    display: flex;
+    justify-content: space-between;
+    .Java i {
+      background: #faff0c;
+    }
+    .C i {
+      background: #00b2bd;
+    }
+    .Dart i {
+      background: #31bd00;
+    }
+    .PHP i {
+      background: #bd0000;
+    }
+    .JavaScript i {
+      background: #b9bd00;
+    }
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      margin-right: 5px;
+      background: #555;
+      display: inline-block;
+    }
+    p {
+      font-size: 10px;
+      line-height: 21px;
+      color: #586069;
+      margin: 0 20px;
+    }
+  }
+}

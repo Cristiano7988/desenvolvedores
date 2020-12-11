@@ -1,0 +1,42 @@
+.container-lista {
+  margin-left: 16px;
+  margin-right: 14px;
+
+  input {
+    margin-top: 15px;
+    margin-bottom: 28px;
+    padding-left: 39px;
+    padding-right: 39px;
+    font-size: 15px;
+    border: 1px solid #90a4ae;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+    height: 35px;
+    background-image: url("data:image/svg+xml,%3Csvg width='18' height='16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17.615 13.833l-3.472-3.115a.886.886 0 00-.592-.219h-.568c.961-1.103 1.532-2.49 1.532-4C14.515 2.91 11.273 0 7.272 0S.029 2.91.029 6.5s3.242 6.499 7.243 6.499c1.682 0 3.228-.513 4.457-1.375v.51c0 .2.088.39.244.53l3.472 3.116a.901.901 0 001.18 0l.986-.885a.7.7 0 00.004-1.062zM7.272 10.499c-2.462 0-4.458-1.787-4.458-4 0-2.209 1.992-4 4.458-4 2.462 0 4.457 1.788 4.457 4 0 2.21-1.992 4-4.457 4z' fill='%23EDEDED'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 10px;
+  }
+  .desenvolvedor {
+    display: flex;
+    padding-left: 11px;
+    padding-top: 14px;
+    padding-bottom: 11px;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.5);
+    .container-img {
+      img {
+        width: 50px;
+        border-radius: 50%;
+      }
+    }
+    .login {
+      padding-left: 22px;
+      font-size: 15px;
+      line-height: 36px;
+      color: #162668;
+      display: flex;
+      align-items: center;
+    }
+  }
+}

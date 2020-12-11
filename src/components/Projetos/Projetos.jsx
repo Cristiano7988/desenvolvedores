@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "./estilo.css";
 
 class Projetos extends Component {
   render() {

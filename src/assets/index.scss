@@ -1,0 +1,12 @@
+@import "./App.scss";
+
+@import "../components/Lista/estilo.scss";
+@import "../components/Perfil/estilo.scss";
+@import "../components/Projetos/estilo.scss";
+@import "../components/Sobre/estilo.scss";
+
+* {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+}
