@@ -1,4 +1,5 @@
-import {ReactComponent as GitLogo} from "./assets/img/gitLogo.svg";
+import { ReactComponent as GitLogo } from "./assets/img/gitLogo.svg";
+import { ReactComponent as Back } from "./assets/img/back.svg";
 import "./assets/App.css";
 import { Component } from "react";
 import Lista from "./components/Lista";
@@ -28,9 +29,17 @@ class App extends Component {
       });
   }
 
+  retornar() {
+    this.setState({ exibirTodos: false });
+  }
+
   render() {
     return this.state.exibirTodos ? (
       <>
+        <div className="container-titulo">
+          <Back onClick={this.retornar.bind(this)} />
+          <h1>Lista de Usuários</h1>
+        </div>
         <Lista lista={this.state.lista} />
       </>
     ) : (

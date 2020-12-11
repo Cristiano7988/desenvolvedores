@@ -1,15 +1,10 @@
 import React, { Component } from "react";
-import {ReactComponent as Back} from "../../assets/img/back.svg";
 import "./estilo.css";
 
 class Lista extends Component {
   render() {
     return (
       <div className="container-lista">
-        <div className="container-titulo">
-          <Back />
-          <h1>Lista de Usuários</h1>
-        </div>
         <input type="text" placeholder="Pesquisar..."/>
         {this.props.lista.map((desenvolvedor, index) => {
           return (

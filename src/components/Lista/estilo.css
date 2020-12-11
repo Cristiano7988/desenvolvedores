@@ -4,22 +4,6 @@
   margin-right: 14px;
 }
 
-.container-lista h1 {
-  padding-left: 14px;
-  padding-top: 14.5px;
-  padding-bottom: 13.5px;
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 21px;
-  color: #263238;
-}
-
-.container-lista svg {
-  padding-left: 8px;
-}
-
 .container-lista input {
   margin-top: 15px;
   margin-bottom: 28px;
@@ -59,16 +43,8 @@
   align-items: center;
 }
 
-.desenvolvedor,
-.container-titulo {
+.desenvolvedor {
   border-bottom: 0.5px solid rgba(0, 0, 0, 0.5);
-}
-
-.container-lista .container-titulo {
-  padding-right: 22px;
-  padding-top: 14.5px;
-  display: flex;
-  align-items: center;
 }
 
 .desenvolvedor img {
