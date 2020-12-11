@@ -1,9 +1,6 @@
 import React, { Component } from "react";
+import Perfil from "../Perfil";
 import "./estilo.css";
-import { ReactComponent as SeguidoresIcon } from "../../assets/img/seguidores.svg";
-import { ReactComponent as ProjetosIcon } from "../../assets/img/projetos.svg";
-import { ReactComponent as SeguindoIcon } from "../../assets/img/seguindo.svg";
-import { ReactComponent as PerfilIcon } from "../../assets/img/perfil.svg";
 
 class Lista extends Component {
   state = {
@@ -15,8 +12,7 @@ class Lista extends Component {
       exibirLista: false,
       avatar: e.target.attributes.avatar.value,
       nome: e.target.attributes.login.value,
-      seguindo: e.target.attributes.seguindo.value.replace("{/other_user}", "")
-        .length,
+      seguindo: e.target.attributes.seguindo.value.replace("{/other_user}", "").length,
       projetos: e.target.attributes.projetos.value.length,
       seguidores: e.target.attributes.seguidores.value.length,
     });
@@ -47,45 +43,13 @@ class Lista extends Component {
         })}
       </div>
     ) : (
-      <div className="container-perfil">
-        <header>
-          <div className="container-img">
-            <div>
-              <img src={this.state.avatar} />
-              <div>{this.state.nome}</div>
-              <div className="perfil-item">
-                <div>
-                  <PerfilIcon />
-                  {this.state.nome}
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="container-menu">
-            <div className="container-item">
-              <div>
-                <SeguindoIcon />
-                {this.state.seguindo}
-              </div>
-              <div>Seguindo</div>
-            </div>
-            <div className="container-item">
-              <div>
-                <ProjetosIcon />
-                {this.state.projetos}
-              </div>
-              <div>Projetos</div>
-            </div>
-            <div className="container-item">
-              <div>
-                <SeguidoresIcon />
-                {this.state.seguidores}
-              </div>
-              <div>Seguidores</div>
-            </div>
-          </div>
-        </header>
-      </div>
+      <Perfil
+        avatar={this.state.avatar}
+        nome={this.state.nome}
+        seguidores={this.state.seguidores}
+        projetos={this.state.projetos}
+        seguindo={this.state.seguidores}
+      />
     );
   }
 }
