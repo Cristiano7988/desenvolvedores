@@ -1,5 +1,9 @@
 import React, { Component } from "react";
 import "./estilo.css";
+import { ReactComponent as SeguidoresIcon } from "../../assets/img/seguidores.svg";
+import { ReactComponent as ProjetosIcon } from "../../assets/img/projetos.svg";
+import { ReactComponent as SeguindoIcon } from "../../assets/img/seguindo.svg";
+import { ReactComponent as PerfilIcon } from "../../assets/img/perfil.svg";
 
 class Lista extends Component {
   state = {
@@ -43,13 +47,43 @@ class Lista extends Component {
         })}
       </div>
     ) : (
-      <div>
+      <div className="container-perfil">
         <header>
-          <img src={this.state.avatar} />
-          <div>{this.state.nome}</div>
-          <div>{this.state.seguindo} Seguindo</div>
-          <div>{this.state.projetos} Projetos</div>
-          <div>{this.state.seguidores} Seguidores</div>
+          <div className="container-img">
+            <div>
+              <img src={this.state.avatar} />
+              <div>{this.state.nome}</div>
+              <div className="perfil-item">
+                <div>
+                  <PerfilIcon />
+                  {this.state.nome}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="container-menu">
+            <div className="container-item">
+              <div>
+                <SeguindoIcon />
+                {this.state.seguindo}
+              </div>
+              <div>Seguindo</div>
+            </div>
+            <div className="container-item">
+              <div>
+                <ProjetosIcon />
+                {this.state.projetos}
+              </div>
+              <div>Projetos</div>
+            </div>
+            <div className="container-item">
+              <div>
+                <SeguidoresIcon />
+                {this.state.seguidores}
+              </div>
+              <div>Seguidores</div>
+            </div>
+          </div>
         </header>
       </div>
     );
