@@ -1,9 +1,9 @@
 import React, { Component } from "react";
+import Sobre from "../Sobre"
 import { ReactComponent as SeguidoresIcon } from "../../assets/img/seguidores.svg";
 import { ReactComponent as ProjetosIcon } from "../../assets/img/projetos.svg";
 import { ReactComponent as SeguindoIcon } from "../../assets/img/seguindo.svg";
 import { ReactComponent as PerfilIcon } from "../../assets/img/perfil.svg";
-
 class Perfil extends Component {
   state = {
     exibirProjetos: false,
@@ -15,8 +15,11 @@ class Perfil extends Component {
     this.setState({ exibirProjetos: true });
   }
   formata(numero) {
-        const formatado = JSON.stringify(numero).length > 3 ? parseFloat(numero.toLocaleString()).toFixed(1)+'K' : numero
-        return formatado
+    const formatado =
+      JSON.stringify(numero).length > 3
+        ? parseFloat(numero.toLocaleString()).toFixed(1) + "K"
+        : numero;
+    return formatado;
   }
   render() {
     return (
@@ -62,7 +65,15 @@ class Perfil extends Component {
           <div onClick={this.exibeBio.bind(this)}>Sobre</div>
           <div onClick={this.exibeProjetos.bind(this)}>Projetos</div>
         </nav>
-        {this.state.exibirProjetos ? <div>Exibe</div> : <div>Não exibe</div>}
+        {this.state.exibirProjetos ? (
+          <div>Exibe</div>
+        ) : (
+        <Sobre
+            bio={this.props.bio}
+            blog={this.props.blog}
+            cidade={this.props.cidade}
+        />
+        )}
       </div>
     );
   }

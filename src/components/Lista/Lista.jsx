@@ -23,6 +23,9 @@ class Lista extends Component {
           seguindo: r.following,
           projetos: r.public_repos,
           seguidores: r.followers,
+          bio: r.bio,
+          blog: r.blog,
+          cidade: r.location
         });
       });
   }
@@ -55,6 +58,9 @@ class Lista extends Component {
         seguidores={this.state.seguidores}
         projetos={this.state.projetos}
         seguindo={this.state.seguindo}
+        bio={this.state.bio}
+        blog={this.state.blog}
+        cidade={this.state.cidade}
       />
     );
   }
