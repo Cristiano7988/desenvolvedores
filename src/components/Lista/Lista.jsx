@@ -7,10 +7,14 @@ class Lista extends Component {
     this.props.exibeDesenvolvedor(e.target.dataset.url)
   }
 
+  _buscar() {
+    this.props.buscar()
+  }
+
   render() {
     return (
       <div className="container-lista">
-        <input type="text" placeholder="Pesquisar..." />
+        <input type="text" id="campo-busca" onChange={this._buscar.bind(this)} placeholder="Pesquisar..." />
         {this.props.lista.map((desenvolvedor, index) => {
           return (
             <a

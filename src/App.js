@@ -100,6 +100,7 @@ class App extends Component {
             </div>
             {this.state.exibirTodos ? (
               <Lista
+                buscar={this.buscar.bind(this)}
                 exibeDesenvolvedor={this.exibeDesenvolvedor.bind(this)}
                 lista={this.state.lista}
               />
