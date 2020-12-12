@@ -33,6 +33,33 @@ class App extends Component {
     this.setState({ exibirTodos: false });
   }
 
+  buscar() {
+    fetch("https://api.github.com/users")
+    .then((r)=>{
+      if(r.ok) {
+        return r.json();
+      }
+    })
+    .then((r)=>{
+      let lista = r.map((i)=>{return i.login});
+      let urls = r.map((i)=>{return i.url});
+      let input = document.querySelector("#campo-busca").value.toLowerCase();
+
+      lista.includes(input.toLowerCase()) ?
+        fetch(urls [lista.indexOf(input.toLowerCase())])
+        .then((r)=>{
+          if(r.ok) {
+            return r.json();
+          }
+        })
+        .then((r)=>{
+          // Exibir perfil encontrado
+        })
+      :
+        ''// Exibir mensagem de erro
+    })
+  }
+
   render() {
     return this.state.exibirTodos ? (
       <>
@@ -46,12 +73,12 @@ class App extends Component {
       <section className="main-section">
         <GitLogo />
         <h1>GitSearch</h1>
-        <input type="text" placeholder="Pesquisar..." />
+        <input type="text" placeholder="Pesquisar..." id="campo-busca" />
         <div className="btn-container">
           <button className="btn ver-todos" onClick={this.verTodos.bind(this)}>
             Ver Todos
           </button>
-          <button className="btn buscar">Buscar</button>
+          <button className="btn buscar" onClick={this.buscar.bind(this)}>Buscar</button>
         </div>
       </section>
     );
