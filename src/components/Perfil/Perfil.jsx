@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Sobre from "../Sobre";
 import Projetos from "../Projetos";
+import "./estilo.css";
 import { ReactComponent as SeguidoresIcon } from "../../assets/img/seguidores.svg";
 import { ReactComponent as ProjetosIcon } from "../../assets/img/projetos.svg";
 import { ReactComponent as SeguindoIcon } from "../../assets/img/seguindo.svg";

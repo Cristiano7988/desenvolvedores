@@ -1,13 +1,21 @@
 import React, { Component } from "react";
 import { ReactComponent as BlogIcon } from "../../assets/img/blog.svg";
 import { ReactComponent as CidadeIcon } from "../../assets/img/cidade.svg";
+import "./estilo.css";
 
 class Sobre extends Component {
   state = {};
   render() {
     return (
-      <>
-        {this.props.bio ? <div>Bio: {this.props.bio}</div> : ""}
+      <div className="container-sobre">
+        {this.props.bio ? (
+          <div>
+            <b>Bio</b>
+            <p>{this.props.bio}</p>
+          </div>
+        ) : (
+          ""
+        )}
         {this.props.cidade ? (
           <div>
             <CidadeIcon />
@@ -24,7 +32,7 @@ class Sobre extends Component {
         ) : (
           ""
         )}
-      </>
+      </div>
     );
   }
 }

@@ -1,0 +1,27 @@
+.container-sobre {
+  margin: 0 20px;
+  text-align: left;
+}
+
+.container-sobre svg {
+  margin-right: 13px;
+}
+
+.container-sobre div {
+  margin-bottom: 24px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 40px;
+  color: #162668;
+}
+
+.container-sobre p {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #263238;
+}

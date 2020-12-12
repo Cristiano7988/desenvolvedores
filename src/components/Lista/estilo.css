@@ -114,12 +114,3 @@
 .container-item div *{
   margin: 0 2.5px;
 }
-
-.container-abas {
-  display: flex;
-  justify-content: center;
-}
-.container-abas div {
-  width: 100%;
-  height: 50px;
-}
