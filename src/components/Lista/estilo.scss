@@ -1,6 +1,11 @@
 .container-lista {
-  margin-left: 16px;
-  margin-right: 14px;
+  padding-left: 16px;
+  padding-right: 14px;
+  background: white;
+  width: 100%;
+  h2 {
+    display: none;
+  }
 
   input {
     margin-top: 15px;
@@ -28,6 +33,7 @@
       img {
         width: 50px;
         border-radius: 50%;
+        border: 5px solid #F2F2F2;
       }
     }
     .login {

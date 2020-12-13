@@ -4,9 +4,14 @@
 @import "../components/Perfil/estilo.scss";
 @import "../components/Projetos/estilo.scss";
 @import "../components/Sobre/estilo.scss";
+@import "./medias.scss";
 
 * {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
+}
+
+body {
+    background: #F8FAFB;
 }

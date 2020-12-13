@@ -1,0 +1,93 @@
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .main-section input {
+    margin-top: unset;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .container-titulo {
+    margin-bottom: 40px;
+    padding-top: unset;
+    filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.25));
+    .mobile-header {
+      display: none;
+    }
+    .not-mobile-header {
+      max-width: 860px;
+      margin: auto;
+      border: unset;
+      padding-top: unset;
+      display: flex;
+
+      svg {
+        height: 50px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        margin-right: 3px;
+        padding-left: unset;
+      }
+      h1 {
+        font-size: 20px;
+        line-height: 22px;
+        color: #000000;
+        padding: unset;
+      }
+    }
+  }
+  .container-lista {
+    max-width: 860px;
+    max-height: 600px;
+    margin: auto;
+    padding-bottom: 36px;
+    margin-bottom: 43px;
+    filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.25));
+    .busca {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      border-bottom: 1px solid #ededed;
+      h2 {
+        display: inline-block;
+        word-break: unset;
+        font-size: 30px;
+        line-height: 36px;
+        white-space: nowrap;
+        margin-left: 33px;
+      }
+      input {
+        margin: unset;
+        font-size: 12px;
+        max-width: 245px;
+        margin-right: 70px;
+      }
+    }
+    .resultados {
+      margin: auto;
+      max-width: 720px;
+      margin-top: 36px;
+      max-height: 430px;
+      overflow-y: scroll;
+      .desenvolvedor {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: unset;
+        padding: unset;
+        width: 140px;
+        height: 215px;
+        border: 1px solid #DEDEDE;
+        .container-img img {
+          width: 100px;
+        }
+        .login {
+          padding: unset;
+          font-size: 20px;
+          line-height: 36px;
+        }
+      }
+    }
+  }
+}

@@ -1,4 +1,5 @@
 import { ReactComponent as GitLogo } from "./assets/img/gitLogo.svg";
+import { ReactComponent as GitLogoShort } from "./assets/img/gitLogoShort.svg";
 import { ReactComponent as Back } from "./assets/img/back.svg";
 import { Component } from "react";
 import Lista from "./components/Lista";
@@ -94,8 +95,14 @@ class App extends Component {
         {this.state.navegacao ? (
           <>
             <div className="container-titulo">
-              <Back onClick={this.retornar.bind(this)} />
-              <h1>{this.state.navegacao}</h1>
+              <div className="not-mobile-header">
+                <GitLogoShort />
+                <h1>GitSearch</h1>
+              </div>
+              <div className="mobile-header">
+                <Back onClick={this.retornar.bind(this)} />
+                <h1>{this.state.navegacao}</h1>
+              </div>
             </div>
             {this.state.exibirTodos ? (
               <Lista
@@ -129,7 +136,10 @@ class App extends Component {
             <h1>GitSearch</h1>
             <input type="text" placeholder="Pesquisar..." id="campo-busca" />
             <div className="btn-container">
-              <button className="btn ver-todos" onClick={this.verTodos.bind(this)}>
+              <button
+                className="btn ver-todos"
+                onClick={this.verTodos.bind(this)}
+              >
                 Ver Todos
               </button>
               <button className="btn buscar" onClick={this.buscar.bind(this)}>
