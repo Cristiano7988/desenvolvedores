@@ -3,7 +3,7 @@ import React, { Component } from "react";
 class Projetos extends Component {
   render() {
     return (
-      <>
+      <div className="projetos">
         {this.props.projetos.map((dado, index) => {
           return (
             <div key={index} className="container-projeto">
@@ -28,7 +28,7 @@ class Projetos extends Component {
             </div>
           );
         })}
-      </>
+      </div>
     );
   }
 }

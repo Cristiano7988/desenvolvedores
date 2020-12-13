@@ -162,6 +162,17 @@
           }
         }
       }
+      .projetos {
+        padding-top: 40px;
+        .container-projeto {
+          flex-direction: row;
+          .projeto-info {
+            flex-direction: column;
+            justify-content: center;
+            white-space: nowrap;
+          }
+        } 
+      }
     }
   }
 }

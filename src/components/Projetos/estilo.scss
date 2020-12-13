@@ -14,7 +14,13 @@
       line-height: 21px;
       color: #0366d6;
       margin-left: 10px;
-    }  
+    } 
+    p {
+      font-size: 10px;
+      line-height: 21px;
+      color: #586069;
+      margin: 0 20px;
+    }
   }
   .projeto-info {
     margin: 0 20px;
@@ -45,12 +51,6 @@
       margin-right: 5px;
       background: #555;
       display: inline-block;
-    }
-    p {
-      font-size: 10px;
-      line-height: 21px;
-      color: #586069;
-      margin: 0 20px;
     }
   }
 }
