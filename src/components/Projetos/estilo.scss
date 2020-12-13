@@ -29,6 +29,13 @@
     color: #586069;
     display: flex;
     justify-content: space-between;
+    span {
+      width: 100%;
+
+      &:last-child {
+        text-align: right;
+      }
+    }
     .Java i {
       background: #faff0c;
     }

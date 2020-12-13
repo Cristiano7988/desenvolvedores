@@ -46,7 +46,8 @@
     border-bottom: 1px solid #90a4ae;
     align-items: center; }
     .container-titulo .mobile-header svg, .container-titulo .not-mobile-header svg {
-      padding-left: 8px; }
+      padding-left: 8px;
+      cursor: pointer; }
     .container-titulo .mobile-header h1, .container-titulo .not-mobile-header h1 {
       padding-left: 14px;
       padding-top: 14.5px;
@@ -86,7 +87,8 @@
     padding-left: 11px;
     padding-top: 14px;
     padding-bottom: 11px;
-    border-bottom: 0.5px solid rgba(0, 0, 0, 0.5); }
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.5);
+    cursor: pointer; }
     .container-lista .desenvolvedor .container-img img {
       width: 50px;
       border-radius: 50%;
@@ -150,7 +152,8 @@
       height: 50px;
       display: flex;
       justify-content: center;
-      align-items: center; }
+      align-items: center;
+      cursor: pointer; }
       .container-perfil .container-abas div:first-child {
         border-right: 1px solid #dae5f0; }
 
@@ -181,6 +184,10 @@
     color: #586069;
     display: flex;
     justify-content: space-between; }
+    .container-projeto .projeto-info span {
+      width: 100%; }
+      .container-projeto .projeto-info span:last-child {
+        text-align: right; }
     .container-projeto .projeto-info .Java i {
       background: #faff0c; }
     .container-projeto .projeto-info .C i {

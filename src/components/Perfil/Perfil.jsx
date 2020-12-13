@@ -39,7 +39,7 @@ class Perfil extends Component {
         <header>
           <div className="container-img">
             <div className="item">
-              <img src={this.props.avatar} />
+              <img alt="Perfil" src={this.props.avatar} />
               <div className="titulo">
                 <h3>{this.props.nome}</h3>
                 <div className="perfil-item">

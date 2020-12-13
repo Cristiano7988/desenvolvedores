@@ -96,7 +96,7 @@ class App extends Component {
           <>
             <div className="container-titulo">
               <div className="not-mobile-header">
-                <GitLogoShort />
+                <GitLogoShort onClick={this.retornar.bind(this)} />
                 <h1>GitSearch</h1>
               </div>
               <div className="mobile-header">
