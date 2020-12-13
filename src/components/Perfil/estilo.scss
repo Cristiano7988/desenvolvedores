@@ -3,16 +3,18 @@
   header {
     .container-img {
       background: cornflowerblue;
-      margin-bottom: 7em;
+      margin-bottom: 11em;
       height: 145px;
-      div {
-        transform: translateY(25%);
+      .item {
+        transform: translateY(3em);
         img {
-          width: 120px;
+          height: 120px;
           border-radius: 50%;
           border: 5px solid #eceff1;
         }
-        img + div {
+        .titulo {
+          display: flex;
+          flex-direction: column;
           line-height: 36.4px;
           font-weight: 600;
           font-size: 24px;
@@ -22,7 +24,7 @@
           line-height: 22px;
           font-size: 16px;
           color: #90a4ae;
-        
+
           svg {
             margin-right: 7px;
           }
@@ -32,23 +34,24 @@
     .container-menu {
       display: flex;
       justify-content: center;
-  
+      padding-top: 20px;
+
       .container-item {
         line-height: 20px;
         font-size: 14px;
         color: #162668;
         width: 100px;
-  
-        div {
-          margin: 0 2.5px;
-          &:first-child {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+
+        div:first-child {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          * {
+            margin: 0 2.5px;
           }
         }
       }
-    } 
+    }
   }
   .container-abas {
     background: #f7f9fa;

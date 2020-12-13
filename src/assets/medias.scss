@@ -78,7 +78,7 @@
         padding: unset;
         width: 140px;
         height: 215px;
-        border: 1px solid #DEDEDE;
+        border: 1px solid #dedede;
         .container-img img {
           width: 100px;
         }
@@ -86,6 +86,80 @@
           padding: unset;
           font-size: 20px;
           line-height: 36px;
+        }
+      }
+    }
+  }
+  .container-perfil {
+    max-width: 860px;
+    margin: auto;
+    text-align: left;
+    box-shadow: 0px 0px 5px grey;
+
+    header .container-img {
+      height: 200px;
+      display: flex;
+      flex-direction: row;
+      margin-bottom: unset;
+      justify-content: space-between;
+
+      .item {
+        display: flex;
+        align-items: center;
+        padding-left: 13px;
+        transform: translateY(33%);
+        img {
+          height: 170px;
+        }
+        .titulo {
+          justify-content: center;
+          margin-left: 36px;
+        }
+        .perfil-item {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+        }
+      }
+      .container-menu {
+        padding: unset;
+        .container-item {
+          flex-direction: column;
+          div:last-child {
+            text-align: center;
+          }
+        }
+      }
+    }
+    section {
+      display: flex;
+      .container-abas {
+        margin-top: 80px;
+        display: flex;
+        flex-direction: column;
+        min-width: 200px;
+        div:first-child {
+          border-right: unset;
+        }
+      }
+      .container-sobre {
+        padding-top: 40px;
+        padding-right: 40px;
+        padding-left: 60px;
+        border-left: 1px solid #cecece;
+        margin: unset;
+        div {
+          margin-bottom: 20px;
+
+          p {
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 22px;
+            color: #263238;
+          }
+          &:nth-child(2) {
+            margin-top: 80px
+          }
         }
       }
     }

@@ -38,59 +38,61 @@ class Perfil extends Component {
       <div className="container-perfil">
         <header>
           <div className="container-img">
-            <div>
+            <div className="item">
               <img src={this.props.avatar} />
-              <div>{this.props.nome}</div>
-              <div className="perfil-item">
-                <div>
+              <div className="titulo">
+                <h3>{this.props.nome}</h3>
+                <div className="perfil-item">
                   <PerfilIcon />
-                  {this.props.login}
+                  <span>{this.props.login}</span>
                 </div>
               </div>
             </div>
-          </div>
-          <div className="container-menu">
-            <div className="container-item">
-              <div>
-                <SeguindoIcon />
-                <span>{this.formata(this.props.seguindo)}</span>
+            <div className="container-menu item">
+              <div className="container-item">
+                <div>
+                  <SeguindoIcon />
+                  <span>{this.formata(this.props.seguindo)}</span>
+                </div>
+                <div>Seguindo</div>
               </div>
-              <div>Seguindo</div>
-            </div>
-            <div className="container-item">
-              <div>
-                <ProjetosIcon />
-                <span>{this.formata(this.props.projetos)}</span>
+              <div className="container-item">
+                <div>
+                  <ProjetosIcon />
+                  <span>{this.formata(this.props.projetos)}</span>
+                </div>
+                <div>Projetos</div>
               </div>
-              <div>Projetos</div>
-            </div>
-            <div className="container-item">
-              <div>
-                <SeguidoresIcon />
-                <span>{this.formata(this.props.seguidores)}</span>
+              <div className="container-item">
+                <div>
+                  <SeguidoresIcon />
+                  <span>{this.formata(this.props.seguidores)}</span>
+                </div>
+                <div>Seguidores</div>
               </div>
-              <div>Seguidores</div>
             </div>
           </div>
         </header>
-        <nav className="container-abas">
-          <div onClick={this.exibeBio.bind(this)}>Sobre</div>
-          <div
-            data-url={this.props.url}
-            onClick={this.exibeProjetos.bind(this)}
-          >
-            Projetos
-          </div>
-        </nav>
-        {this.state.exibirProjetos ? (
-          <Projetos projetos={this.state.projetos} />
-        ) : (
-          <Sobre
-            bio={this.props.bio}
-            blog={this.props.blog}
-            cidade={this.props.cidade}
-          />
-        )}
+        <section>
+          <nav className="container-abas">
+            <div onClick={this.exibeBio.bind(this)}>Sobre</div>
+            <div
+              data-url={this.props.url}
+              onClick={this.exibeProjetos.bind(this)}
+            >
+              Projetos
+            </div>
+          </nav>
+          {this.state.exibirProjetos ? (
+            <Projetos projetos={this.state.projetos} />
+          ) : (
+            <Sobre
+              bio={this.props.bio}
+              blog={this.props.blog}
+              cidade={this.props.cidade}
+            />
+          )}
+        </section>
       </div>
     );
   }
