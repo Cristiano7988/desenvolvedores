@@ -277,7 +277,7 @@
         margin-right: 70px; }
     .container-lista .resultados {
       margin: auto;
-      max-width: 720px;
+      max-width: 730px;
       margin-top: 36px;
       max-height: 430px;
       overflow-y: scroll; }
@@ -354,7 +354,9 @@
           .container-perfil section .container-sobre div:nth-child(2) {
             margin-top: 80px; }
       .container-perfil section .projetos {
-        padding-top: 40px; }
+        padding-top: 40px;
+        max-height: 1000px;
+        overflow-y: auto; }
         .container-perfil section .projetos .container-projeto {
           flex-direction: row; }
           .container-perfil section .projetos .container-projeto .projeto-info {

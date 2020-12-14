@@ -65,7 +65,7 @@
     }
     .resultados {
       margin: auto;
-      max-width: 720px;
+      max-width: 730px;
       margin-top: 36px;
       max-height: 430px;
       overflow-y: scroll;
@@ -164,6 +164,8 @@
       }
       .projetos {
         padding-top: 40px;
+        max-height: 1000px;
+        overflow-y: auto;
         .container-projeto {
           flex-direction: row;
           .projeto-info {
